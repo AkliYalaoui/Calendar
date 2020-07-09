@@ -38,9 +38,18 @@ function getIndexOFLastSundayOfMonth() {
 
 (function getMonth() {
     "use strict";
-    var $index, $start = getIndexOFLastSundayOfMonth(), $date = new Date();
-    for ($index = $start; $index <= $start + 35; $index = $index + 1) {
+    var $index,
+        $start = getIndexOFLastSundayOfMonth(),
+        $date = new Date(),
+        text,
+        div,
+        dt;
+    for ($index = $start; $index < $start + 35; $index = $index + 1) {
         $date.setFullYear($year, $month - 1, $index);
-        console.log($date);
+        dt = $date.getDate();
+        text = document.createTextNode(dt);
+        div = document.createElement("div");
+        div.appendChild(text);
+        $calendar.appendChild(div);
     }
 }());
