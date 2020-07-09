@@ -49,7 +49,15 @@ function getIndexOFLastSundayOfMonth() {
         dt = $date.getDate();
         text = document.createTextNode(dt);
         div = document.createElement("div");
-        div.appendChild(text);
+        if ($date.getMonth() !== $month) {
+            div.innerHTML = "<span style='color:#aaa'>" + dt + "</span>";
+        } else if (dt === $monthDay) {
+            div.style.background = "#d63031";
+            div.style.color = "#fff";
+            div.appendChild(text);
+        } else {
+            div.appendChild(text);
+        }
         $calendar.appendChild(div);
     }
 }());

@@ -16,7 +16,7 @@ body{
   margin: 30px auto 0;
 }
 .current-date{
-  background-color: #58b2a4;
+  background-color: #d63031;
   padding: 20px;
   color: #fff;
 }
@@ -49,6 +49,6 @@ body{
   padding-top: 15px;
 }
 #calendar div:hover{
-  background-color:#58b2a4;
+  background-color:#d63031;
   color: #fff;
 }
