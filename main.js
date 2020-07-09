@@ -1,6 +1,5 @@
 /*global console,document*/
 var
-    $today = document.getElementById('today'),
     $thisMonth = document.getElementById('thisMonth'),
     $calendar = document.getElementById('calendar'),
 
@@ -11,10 +10,8 @@ var
 
     $days   = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
     $months = ["januay", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
-//the current day
-$today.innerHTML = '"'.concat($days[$day], " , ", $months[$month], " , ", $monthDay, " , ", $year, '"');
-$year = 2020;
-$month = 0;
+// the cuurent $month
+$thisMonth.innerHTML = $months[$month];
 //the calendar of this month
 function getIndexOFLastSundayOfMonth() {
     "use strict";
